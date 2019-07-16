@@ -38,7 +38,7 @@ If a line contains multiple instances of valid content, print out each instance 
 <SA premium>Imtiaz has a secret crush</SA premium>
 ```
 
-##Sample Output
+## Sample Output
 
 ```html 
 Nayeem loves counseling

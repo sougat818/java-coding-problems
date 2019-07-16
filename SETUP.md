@@ -31,4 +31,13 @@ gi maven,java,eclipse,intellij+all > .gitignore
 ```
 
 ### Maven Wrapper
+TBC
+
+### Intellij Templates
+
+* Files are already placed at .idea/fileTemplates
+* Open Preferences --> Editor --> File & Code Templates 
+* Switch to Project and hit apply
+* Problem${PROBLEM_NUMBER} templates are now available at new File Menu Options
+
 
