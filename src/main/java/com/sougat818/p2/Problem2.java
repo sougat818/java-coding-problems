@@ -39,7 +39,6 @@ class Problem2 {
     for (int i = 0; i < nums.length; i++) {
       int currentValue = nums[i];
       if (possibleValues.containsKey(currentValue)) {
-        possibleValues.get(currentValue);
         return new int[]{possibleValues.get(currentValue), i};
       } else {
         possibleValues.put(target - currentValue, i);

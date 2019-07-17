@@ -53,3 +53,19 @@ TBC
 
 ### Maven Wrapper
 ```mvn -N io.takari:maven:0.7.6:wrapper```
+
+### Maven Enforcer
+```maven-enforcer-plugin```
+```java version```
+```maven version```
+
+### Maven Unit Test reports
+```maven-surefire-report-plugin```
+
+### Dependecy Version Management
+```versions-maven-plugin```
+
+### Code Coverage
+
+```jacoco-maven-plugin```
+```circle CI & Travis integration to codecov.io```
