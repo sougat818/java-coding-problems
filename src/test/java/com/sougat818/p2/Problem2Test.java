@@ -44,22 +44,22 @@ public class Problem2Test {
 
   }
 
-  @Test(timeout = 10)
+  @Test(timeout = 20)
   public void twoSumSolution1() {
     assertArrayEquals(new int[]{0, 3}, problem2.twoSum(new int[]{10, 15, 3, 7}, 17));
   }
 
-  @Test(timeout = 10)
+  @Test(timeout = 20)
   public void twoSumSolution2() {
     assertArrayEquals(new int[]{0, 1}, problem2.twoSum(new int[]{2, 7, 11, 15}, 9));
   }
 
-  @Test(timeout = 10)
+  @Test(timeout = 20)
   public void twoSumSolution3() {
     assertArrayEquals(new int[]{}, problem2.twoSum(new int[]{10, 15, 3, 7}, 100));
   }
 
-  @Test(timeout = 10)
+  @Test(timeout = 20)
   public void twoSumSolution4() {
     assertArrayEquals(new int[]{}, problem2.twoSum(new int[]{}, 100));
   }
