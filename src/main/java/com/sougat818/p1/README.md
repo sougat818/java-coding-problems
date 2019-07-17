@@ -47,3 +47,4 @@ So wait for a while
 None
 Imtiaz has a secret crush
 ```
+[Solution](Problem1.java)
