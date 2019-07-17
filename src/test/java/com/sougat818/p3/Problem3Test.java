@@ -45,4 +45,16 @@ public class Problem3Test {
         problem3.addTwoNumbers(listNode, listNode).toString());
   }
 
+  @Test
+  public void testSolution4() {
+
+    ListNode listNode1 = new ListNode(new int[]{1, 2, 3, 4, 5});
+    ListNode listNode2 = new ListNode(new int[]{9, 8, 1, 6});
+
+    Assert.assertEquals("01506", problem3.addTwoNumbers(listNode1, listNode2).toString());
+    Assert.assertEquals("01506", problem3.addTwoNumbers(listNode2, listNode1).toString());
+  }
+
+
+
 }
