@@ -47,5 +47,3 @@ So wait for a while
 None
 Imtiaz has a secret crush
 ```
-
-[HackerRank]: https://www.hackerrank.com/challenges/tag-content-extractor/problem
