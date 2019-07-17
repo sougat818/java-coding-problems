@@ -50,3 +50,6 @@ TBC
 
 ```codeStyles/codeStyleConfig.xml```<br/>
 ```pom.xml - maven-checkstyle-plugin```
+
+### Maven Wrapper
+```mvn -N io.takari:maven:0.7.6:wrapper```
