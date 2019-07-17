@@ -18,3 +18,6 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
       - run: ./mvnw package
+notify:
+  webhooks:
+    - url: https://webhooks.gitter.im/e/bca562f3e9ee6aaaf878
