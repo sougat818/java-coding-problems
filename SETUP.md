@@ -40,4 +40,13 @@ TBC
 * Switch to Project and hit apply
 * Problem${PROBLEM_NUMBER} templates are now available at new File Menu Options
 
+### Circle CI
+```.circleci/config.yml```
 
+### Travis CI 
+```.travis.yml```
+
+### Code Style
+
+```codeStyles/codeStyleConfig.xml```<br/>
+```pom.xml - maven-checkstyle-plugin```
