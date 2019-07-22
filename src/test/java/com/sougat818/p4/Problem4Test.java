@@ -16,7 +16,7 @@ public class Problem4Test {
   @Test
   public void testSolution1() {
     MetricSummary metricSummary = problem4.solution(
-        this.getClass().getClassLoader().getResource("com/sougat818/p4/data.log").getPath());
+        this.getClass().getClassLoader().getResource("com/sougat818/p4/data_log").getPath());
 
     Assert.assertEquals(Long.valueOf(11), metricSummary.getUniqueIps());
 
