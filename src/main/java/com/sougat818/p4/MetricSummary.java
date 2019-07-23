@@ -1,30 +1,41 @@
 package com.sougat818.p4;
 
+import java.util.Collections;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 class MetricSummary {
 
-  public MetricSummary(Map<String, Long> topIps,
-      Map<String, Long> topUrls, Long uniqueIps) {
-    this.topIps = topIps;
-    this.topUrls = topUrls;
-    this.uniqueIps = uniqueIps;
-  }
+    ConcurrentHashMap<String, Long> urls = new ConcurrentHashMap<>();
 
-  private Map<String, Long> topIps;
-  private Map<String, Long> topUrls;
-  private Long uniqueIps;
+    ConcurrentHashMap<String, Long> ips = new ConcurrentHashMap<>();
 
+    void addUrl(String url) {
+        urls.merge(url, 1L, Long::sum);
+    }
 
-  public Long getUniqueIps() {
-    return uniqueIps;
-  }
+    void addIp(String ip) {
+        ips.merge(ip, 1L, Long::sum);
+    }
 
-  public Map<String, Long> getTopIps() {
-    return topIps;
-  }
+    private Map<String, Long> getTopN(ConcurrentHashMap<String, Long> urls, int n) {
+        return
+                urls.entrySet().parallelStream()
+                        .sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+                        .limit(n)
+                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
 
-  public Map<String, Long> getTopUrls() {
-    return topUrls;
-  }
+    Map<String, Long> getTopIps() {
+        return getTopN(ips, 3);
+    }
+
+    Map<String, Long> getTopUrls() {
+        return getTopN(urls, 3);
+    }
+
+    int getUniqueIps() {
+        return ips.keySet().size();
+    }
 }
