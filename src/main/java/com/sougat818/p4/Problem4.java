@@ -5,28 +5,21 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-/**
- * Template.
- */
-
+/** Template. */
 class Problem4 {
 
-    MetricSummary solution(String paths) throws IOException {
-        Path path = Paths
-                .get(paths);
+  MetricSummary solution(String paths) throws IOException {
+    Path path = Paths.get(paths);
 
-        MetricSummary metricSummary = new MetricSummary();
+    MetricSummary metricSummary = new MetricSummary();
 
-
-        Files.lines(path).map(Metric::new).forEach(metric -> {
-            metricSummary.addUrl(metric.getUrl());
-            metricSummary.addIp(metric.getIp());
-
-        });
-        return metricSummary;
-
-    }
-
+    Files.lines(path)
+        .map(Metric::new)
+        .forEach(
+            metric -> {
+              metricSummary.addUrl(metric.getUrl());
+              metricSummary.addIp(metric.getIp());
+            });
+    return metricSummary;
+  }
 }
-
-
