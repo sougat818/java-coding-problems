@@ -1,13 +1,11 @@
 package com.sougat818.p2;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import static org.junit.Assert.*;
 
 public class Problem2Test {
 
@@ -21,17 +19,17 @@ public class Problem2Test {
     problem2 = new Problem2();
   }
 
-  @Test(timeout = 10)
+  @Test
   public void addsToKSolutionIsTrue() {
     assertTrue(problem2.addsToK(17, 10, 15, 3, 7));
   }
 
-  @Test(timeout = 5)
+  @Test
   public void addsToKSolutionIsFalse() {
     assertFalse(problem2.addsToK(100, 10, 15, 3, 7));
   }
 
-  @Test(timeout = 10)
+  @Test
   public void addsToKEdgeCases() {
     assertFalse(problem2.addsToK(1));
   }
